@@ -8,7 +8,5 @@
 script = ExtResource( 3 )
 
 [node name="Smoke" parent="." instance=ExtResource( 1 )]
-visible = false
 
 [node name="Rain" parent="." instance=ExtResource( 2 )]
-visible = false
