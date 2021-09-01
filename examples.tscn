@@ -6,11 +6,8 @@
 
 [node name="Examples" type="Node2D"]
 
-[node name="TweenMove" parent="." instance=ExtResource( 2 )]
-visible = false
+[node name="tween-bounce" parent="." instance=ExtResource( 3 )]
 
-[node name="TweenBounce" parent="." instance=ExtResource( 3 )]
-visible = false
+[node name="tween-ease-in" parent="." instance=ExtResource( 1 )]
 
-[node name="TweenEaseIn" parent="." instance=ExtResource( 1 )]
-visible = false
+[node name="tween-move" parent="." instance=ExtResource( 2 )]
