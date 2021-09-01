@@ -4,7 +4,7 @@
 [ext_resource path="res://tween-move.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tween-bounce.tscn" type="PackedScene" id=3]
 
-[node name="Examples" type="Node2D"]
+[node name="examples" type="Node2D"]
 
 [node name="tween-bounce" parent="." instance=ExtResource( 3 )]
 
