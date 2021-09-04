@@ -30,5 +30,5 @@ func ToggleTween():
 		_movingUp = true
 		TweenUp()
 
-func _on_Tween_tween_completed(object: Object, key: NodePath) -> void:
+func _on_Tween_tween_completed(_object: Object, _key: NodePath) -> void:
 	ToggleTween()
