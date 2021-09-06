@@ -18,7 +18,7 @@ var _flag = false
 var _isRunning = false
 
 func _ready() -> void:
-	Start()
+	pass
 
 func Start():
 	_isRunning = true
