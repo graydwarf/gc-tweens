@@ -25,6 +25,10 @@ func Start():
 	ToggleTween()
 
 func Stop():
+	_tween1.stop_all()
+	_tween2.stop_all()
+	_tween3.stop_all()
+	_tween4.stop_all()
 	_isRunning = false
 
 func Move1():
