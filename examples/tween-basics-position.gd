@@ -15,9 +15,17 @@ onready var _easeInOutIcon = $EaseInOutIcon
 onready var _easeOutInIcon = $EaseOutInIcon
 onready var _titleLabel = $TitleLabel
 var _flag = false
+var _isRunning = false
 
 func _ready() -> void:
+	Start()
+
+func Start():
+	_isRunning = true
 	ToggleTween()
+
+func Stop():
+	_isRunning = false
 
 func Move1():
 	_tween1.interpolate_property(_easeInIcon, "position", Vector2(64, 64),
@@ -70,6 +78,9 @@ func ToggleTween():
 
 # Only need one of the teens to monitor and trigger completed events for all
 func _on_Tween_tween_completed(_object: Object, _key: NodePath) -> void:
+	if !_isRunning:
+		return
+
 	ToggleTween()
 
 func _on_TransLinearButton_pressed() -> void:

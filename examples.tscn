@@ -6,7 +6,5 @@
 [node name="examples" type="Node2D"]
 
 [node name="tween-basics-position" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="tween-basics-scale" parent="." instance=ExtResource( 1 )]
-visible = false
