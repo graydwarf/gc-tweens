@@ -14,7 +14,7 @@ onready var _easeOutIcon = $EaseOutIcon
 onready var _easeInOutIcon = $EaseInOutIcon
 onready var _easeOutInIcon = $EaseOutInIcon
 onready var _titleLabel = $TitleLabel
-var _flag = false
+var _toggleBit = false
 var _isRunning = false
 
 func _ready() -> void:
@@ -25,13 +25,23 @@ func Start():
 	ToggleTween()
 
 func Stop():
+	StopAll()
+	ResetAll()
+	_isRunning = false
+
+func StopAll():
 	_tween1.stop_all()
 	_tween2.stop_all()
 	_tween3.stop_all()
 	_tween4.stop_all()
-	_isRunning = false
 
-func Move1():
+func ResetAll():
+	_tween1.reset_all()
+	_tween2.reset_all()
+	_tween3.reset_all()
+	_tween4.reset_all()
+
+func MoveDirection1():
 	_tween1.interpolate_property(_easeInIcon, "position", Vector2(64, 64),
 		Vector2(500, 64), _tweenSpeed,
 		_tweenTransistionType, Tween.EASE_IN, _tweenWaitTime)
@@ -52,7 +62,7 @@ func Move1():
 		_tweenTransistionType, Tween.EASE_OUT_IN, _tweenWaitTime)
 	_tween4.start()
 
-func Move2():
+func MoveDirection2():
 	_tween1.interpolate_property(_easeInIcon, "position", Vector2(500, 64),
 		Vector2(64, 64), _tweenSpeed,
 		_tweenTransistionType, Tween.EASE_IN, _tweenWaitTime)
@@ -74,11 +84,11 @@ func Move2():
 	_tween4.start()
 
 func ToggleTween():
-	_flag = !_flag
-	if _flag:
-		Move1()
+	_toggleBit = !_toggleBit
+	if _toggleBit:
+		MoveDirection1()
 	else:
-		Move2()
+		MoveDirection2()
 
 # Only need one of the teens to monitor and trigger completed events for all
 func _on_Tween_tween_completed(_object: Object, _key: NodePath) -> void:

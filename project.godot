@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="gc-tweens"
-run/main_scene="res://examples.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://main.tscn"
+config/icon="res://assets/icon.png"
+
+[autoload]
+
+Signals="*res://singletons/signals.gd"
 
 [input]
 
@@ -34,4 +38,5 @@ a_down={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_clear_color=Color( 0.223529, 0.223529, 0.223529, 1 )
+environment/default_environment="res://support/default_env.tres"
