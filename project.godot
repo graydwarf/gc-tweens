@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="gc-tweens"
-run/main_scene="res://tween-examples.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]
 
-TweenSignals="*res://singletons/tween-signals.gd"
+Signals="*res://singletons/signals.gd"
 
 [input]
 
