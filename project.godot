@@ -21,7 +21,12 @@ config/icon="res://assets/icon.png"
 
 [autoload]
 
-Signals="*res://singletons/signals.gd"
+TweenSignals="*res://singletons/tween-signals.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
 
 [input]
 

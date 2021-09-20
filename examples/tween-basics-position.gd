@@ -14,6 +14,10 @@ onready var _easeOutIcon = $EaseOutIcon
 onready var _easeInOutIcon = $EaseInOutIcon
 onready var _easeOutInIcon = $EaseOutInIcon
 onready var _titleLabel = $TitleLabel
+
+var _rootGitHubPath = "https://raw.githubusercontent.com/graydwarf/"
+var _rootGitHubProjectPath = _rootGitHubPath + "gc-tweens/"
+var _rootGitHubExamplePath = _rootGitHubProjectPath + "main/examples/"
 var _toggleBit = false
 var _isRunning = false
 
@@ -140,3 +144,6 @@ func _on_TransBounceButton_pressed() -> void:
 func _on_TransBackButton_pressed() -> void:
 	_titleLabel.text = "TRANS_BACK = 10 The animation is interpolated backing out at ends."
 	_tweenTransistionType = Tween.TRANS_BACK
+
+func GetSourcePath():
+	return _rootGitHubExamplePath + "tween-basics-position.gd"
